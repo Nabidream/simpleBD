@@ -1,0 +1,41 @@
+<html>
+<head>
+<!DOCTYPE html>
+<html >
+ <head>
+	<title>업무관리</title>
+	<meta charset="utf-8">
+	<link href="./css/main.css" rel="stylesheet">
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+	<script lang="javascript" src="./js/qsMain.js"></script>
+	<script lang="javascript" src="./js/jquery.js"></script>
+	<script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+
+</head>
+<body>
+<span class="context-menu-one btn btn-neutral">hover over me</span>
+<script type="text/javascript" class="showcase">
+$(function(){
+    $.contextMenu({
+        selector: '.context-menu-one', 
+        trigger: 'hover',
+        delay: 500,
+        autoHide: true,
+        callback: function(key, options) {
+            var m = "clicked: " + key;
+            window.console && console.log(m) || alert(m); 
+        },
+        items: {
+            "edit": {name: "Edit", icon: "edit"},
+            "cut": {name: "Cut", icon: "cut"},
+            "copy": {name: "Copy", icon: "copy"},
+            "paste": {name: "Paste", icon: "paste"},
+            "delete": {name: "Delete", icon: "delete"},
+            "sep1": "---------",
+            "quit": {name: "Quit", icon: function($element, key, item){ return 'context-menu-icon context-menu-icon-quit'; }}
+        }
+    });
+});
+</script>
+</body>
+</html>

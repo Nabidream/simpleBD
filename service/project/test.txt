@@ -1,0 +1,3 @@
+<button type="button" class="textButton" onclick="axMessageWrite(<?php echo $fromUser ?>,'messageContent','messageContent')">[보내기]</button>
+
+	<?php echo "<button type=\"button\" class=\"textButton\" onclick=\"axMessageWrite(aaaa,'messageTitle','messageContent')\">[보내기]</button>"; ?>
