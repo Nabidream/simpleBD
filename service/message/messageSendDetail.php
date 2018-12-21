@@ -10,7 +10,7 @@
 	$messageID = (int)$_GET['MESSAGEID'];
 	$no =0;
 	if(isset($_GET['NO'])) $no = (int)$_GET['NO'];
-	$SQL = "SELECT ut.uGroup, ut.uNick, ut.uEmail ,pt.* FROM UsersTBL ut, SendMsgTBL pt WHERE ut.userID = pt.toUser AND pt.messageID={$messageID}";
+	$SQL = "SELECT ut.gradeID, ut.uNick, ut.uEmail ,pt.* FROM UsersTBL ut, SendMsgTBL pt WHERE ut.userID = pt.toUser AND pt.messageID={$messageID}";
 	$result=qsSysSelectSQL($SQL);
 	//echo $SQL;
 	$row=$result->fetch();
